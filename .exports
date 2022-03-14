@@ -1,0 +1,62 @@
+# Custom PATH
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin/personal"
+export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
+export PATH="$PATH:/usr/sbin/xclip-copyfile"
+export PATH="$PATH:/usr/sbin/xclip-pastefile"
+export PATH="$PATH:/usr/sbin/xclip-cutfile"
+export PATH="$PATH:$HOME/.cargo/bin"
+# export PATH="$PATH:./node_modules/bin"
+
+# npm to $PATH
+export PATH="$PATH:$HOME/.npm/bin"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+# Variables
+function _get_editor { echo $(which lvim) || echo $(which nvim) || echo $(which vim) || echo $(which vi) || echo $(which nano)}
+function _get_node { echo /home/evgeniy/.nvm/versions/node/$(node -v)/lib/node_modules/neovim/bin/cli.js }
+function _get_terminal { echo $(which kitty) || echo $(which alacritty) || echo $(which tilix) || echo $(which urxvt) || echo $(which gnome-terminal) || echo $(which xterm)}
+export DEF_TERM="$(_get_terminal)"
+export SUDO_EDITOR="$(_get_editor)"
+export VISUAL="$(_get_editor)"
+export EDITOR="$(_get_editor)"
+# export GTK_IM_MODULE="xim"
+# export MON_PRIMARY=$(xrandr | grep -w "connected primary" | awk '{print $1}')
+export MANPATH="/usr/local/man:$MANPATH"
+export TERMINAL="$DEF_TERM"
+export BROWSER="firefox"
+export SERVER_IP="$(hostname -i | awk '{print $1}')"
+
+# You may need to manually set your language environment
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
+export TERM=xterm-256color
+
+# NNN settings:
+export NNN_OPENER=gio open
+export NNN_FALLBACK_OPENER=xdg-open
+export NNN_DE_FILE_MANAGER=nautilus
+export NNN_PLUG='o:fzopen;p:mocplay;d:diffs;m:nmount;n:notes;v:imgviu;t:imgthumb;u:getplugs;i:-imgview;k:kdekonnect;d:-mediainfo'
+
+# RipGrep settings path:
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
+
+# GPG
+export GNUPGHOME="$HOME/.local/share/gnupg"
+export XDG_CONFIG_HOME="$HOME/.config"
+
+# Open Neovim-Qt in 'remote' mode
+NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+
+# Dotbare
+export DOTBARE_PREVIEW="bat --color=always --style=numbers {}"
+
+# Nvim
+export PYTHON_HOST_PROG="/usr/bin/python2"
+export PYTHON3_HOST_PROG="/usr/bin/python3"
+export NODE_HOST_PROG="$(_get_node)"
+
+# codestats
+CODESTATS_API_KEY=""
