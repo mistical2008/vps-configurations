@@ -1,0 +1,52 @@
+{
+  "audio": "pipewire",
+  "bootloader": "systemd-bootctl",
+  "custom-commands": [
+    "usermod -aG docker devel",
+    "wget https://gitlab.com/evgeniy_talko/dotfiles-bare/-/raw/temp/.aliases_base",
+    "echo \"[[  -f $HOME/.aliases_base  ]] && source $HOME/.aliases_base\" >> ~/.zshrc",
+    "wget https://gitlab.com/evgeniy_talko/dotfiles-bare/-/raw/temp/.exports",
+    "echo \"[[  -f $HOME/.exports  ]] && source $HOME/.exports\" >> ~/.zshrc",
+    "echo 'eval \"$(starship init zsh)\"' >> ~/.zshrc"
+  ],
+  "!encryption-password": "SUPERSECRET",
+  "filesystem": "btrfs",
+  "harddrive": {
+    "path": "/dev/vba"
+  },
+  "hostname": "vps-server",
+  "kernels": ["linux"],
+  "keyboard-language": "us",
+  "mirror-region": "Worldwide",
+  "nic": {
+    "NetworkManager": true
+  },
+  "ntp": true,
+  "packages": [
+    "docker",
+    "git",
+    "wget",
+    "zsh",
+    "starship",
+    "tmux",
+    "tmuxinator",
+    "exa",
+    "vifm",
+    "nnn",
+    "rg",
+    "bat",
+    "pydf",
+    "ncdu",
+    "fzf",
+    "htop"
+  ],
+  "services": ["docker"],
+  "superusers": {
+    "tylerdurden": {
+      "!password": "SOMESECRETPASSWORD"
+    }
+  },
+  "sys-encoding": "utf-8",
+  "sys-language": "en_US",
+  "timezone": "RU/Moscow"
+}
