@@ -12,7 +12,7 @@
   "!encryption-password": "SUPERSECRET",
   "filesystem": "btrfs",
   "harddrive": {
-    "path": "/dev/vba"
+    "path": "/dev/vda"
   },
   "hostname": "vps-server",
   "kernels": ["linux"],
@@ -42,6 +42,7 @@
     "fail2ban",
     "ufw"
   ],
+  "profile": "server",
   "services": ["docker"],
   "superusers": {
     "tylerdurden": {
@@ -50,5 +51,6 @@
   },
   "sys-encoding": "utf-8",
   "sys-language": "en_US",
-  "timezone": "RU/Moscow"
+  "timezone": "RU/Moscow",
+  "users": {}
 }
