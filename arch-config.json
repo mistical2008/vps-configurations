@@ -27,6 +27,7 @@
   },
   "ntp": true,
   "packages": [
+    "netctl",
     "openssh",
     "neovim",
     "python-neovim",
