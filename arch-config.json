@@ -33,6 +33,7 @@
     "xclip",
     "xsel",
     "docker",
+    "docker-compose",
     "git",
     "wget",
     "zsh",
