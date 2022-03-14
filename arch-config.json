@@ -3,9 +3,9 @@
   "bootloader": "systemd-bootctl",
   "custom-commands": [
     "usermod -aG docker devel",
-    "wget https://raw.githubusercontent.com/mistical2008/vps-configurations/main/.aliases_base",
+    "cd /home/tylerdurden && wget https://raw.githubusercontent.com/mistical2008/vps-configurations/main/.aliases_base",
     "echo \"[[  -f $HOME/.aliases_base  ]] && source $HOME/.aliases_base\" >> ~/.zshrc",
-    "wget https://raw.githubusercontent.com/mistical2008/vps-configurations/main/.exports",
+    "cd /home/tylerdurden && wget https://raw.githubusercontent.com/mistical2008/vps-configurations/main/.exports",
     "echo \"[[  -f $HOME/.exports  ]] && source $HOME/.exports\" >> ~/.zshrc",
     "echo 'eval \"$(starship init zsh)\"' >> ~/.zshrc"
   ],
@@ -51,6 +51,6 @@
   },
   "sys-encoding": "utf-8",
   "sys-language": "en_US",
-  "timezone": "RU/Moscow",
+  "timezone": "Europe/Moscow",
   "users": {}
 }
