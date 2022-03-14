@@ -38,7 +38,9 @@
     "pydf",
     "ncdu",
     "fzf",
-    "htop"
+    "htop",
+    "fail2ban",
+    "ufw"
   ],
   "services": ["docker"],
   "superusers": {
