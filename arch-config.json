@@ -16,6 +16,8 @@
   },
   "hostname": "vps-server",
   "kernels": ["linux"],
+  "keyboard-layout": "us",
+  "script": "config",
   "keyboard-language": "us",
   "mirror-region": "Worldwide",
   "nic": {
