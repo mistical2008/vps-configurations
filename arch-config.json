@@ -2,7 +2,8 @@
   "audio": "pipewire",
   "bootloader": "grub-install",
   "custom-commands": [
-    "usermod -aG docker devel",
+    "mkdir /mnt/btrfs",
+    "usermod -aG docker tylerdurden",
     "chsh tylerdurden -s /usr/bin/zsh",
     "cd /home/tylerdurden && wget https://raw.githubusercontent.com/mistical2008/vps-configurations/main/.aliases_base",
     "echo \"[[  -f $HOME/.aliases_base  ]] && source $HOME/.aliases_base\" >> ~/.zshrc",
@@ -13,13 +14,14 @@
     "pacman -S --needed git base-devel",
     "git clone https://aur.archlinux.org/yay-bin.git",
     "cd yay-bin",
-    "makepkg -si"
+    "makepkg -si",
+    "yay -S snapper-rollback"
   ],
   "gfx_driver": "VMware / VirtualBox (open-source)",
   "!encryption-password": "SUPERSECRET",
   "filesystem": "btrfs",
   "harddrive": {
-    "path": "/dev/vda1"
+    "path": "/dev/vda2"
   },
   "hostname": "vps-server",
   "kernels": ["linux"],
@@ -55,7 +57,11 @@
     "fzf",
     "htop",
     "fail2ban",
-    "ufw"
+    "ufw",
+    "rsync",
+    "snapper",
+    "snap-pac",
+    "restic"
   ],
   "profile": "server",
   "services": ["docker"],
