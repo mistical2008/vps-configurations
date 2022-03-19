@@ -8,7 +8,12 @@
     "echo \"[[  -f $HOME/.aliases_base  ]] && source $HOME/.aliases_base\" >> ~/.zshrc",
     "cd /home/tylerdurden && wget https://raw.githubusercontent.com/mistical2008/vps-configurations/main/.exports",
     "echo \"[[  -f $HOME/.exports  ]] && source $HOME/.exports\" >> ~/.zshrc",
-    "echo 'eval \"$(starship init zsh)\"' >> ~/.zshrc"
+    "echo 'eval \"$(starship init zsh)\"' >> ~/.zshrc",
+    "mkdir _build && cd _build",
+    "pacman -S --needed git base-devel",
+    "git clone https://aur.archlinux.org/yay-bin.git",
+    "cd yay-bin",
+    "makepkg -si"
   ],
   "gfx_driver": "VMware / VirtualBox (open-source)",
   "!encryption-password": "SUPERSECRET",
