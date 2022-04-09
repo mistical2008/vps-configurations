@@ -3,12 +3,12 @@
   "bootloader": "grub-install",
   "custom-commands": [
     "mkdir /mnt/btrfs",
-    "usermod -aG docker tylerdurden",
+    "usermod -aG docker LOWPRIUSER",
     "sysctl -w net.core.rmem_max=2500000",
-    "chsh tylerdurden -s /usr/bin/zsh",
-    "cd /home/tylerdurden && wget https://raw.githubusercontent.com/mistical2008/vps-configurations/main/.aliases_base",
+    "chsh LOWPRIUSER -s /usr/bin/zsh",
+    "cd /home/LOWPRIUSER && wget https://raw.githubusercontent.com/mistical2008/vps-configurations/main/.aliases_base",
     "echo \"[[  -f $HOME/.aliases_base  ]] && source $HOME/.aliases_base\" >> ~/.zshrc",
-    "cd /home/tylerdurden && wget https://raw.githubusercontent.com/mistical2008/vps-configurations/main/.exports",
+    "cd /home/LOWPRIUSER && wget https://raw.githubusercontent.com/mistical2008/vps-configurations/main/.exports",
     "echo \"[[  -f $HOME/.exports  ]] && source $HOME/.exports\" >> ~/.zshrc",
     "echo 'eval \"$(starship init zsh)\"' >> ~/.zshrc",
     "mkdir _build && cd _build",
@@ -17,7 +17,8 @@
     "cd yay-bin",
     "makepkg -si",
     "yay -S snapper-rollback",
-    "yay -S storj-uplink rclone-bin"
+    "yay -S storj-uplink rclone-bin",
+    "cp ./.config /home/LOWPRIUSER/.config"
   ],
   "gfx_driver": "VMware / VirtualBox (open-source)",
   "!encryption-password": "SUPERSECRET",
@@ -68,7 +69,7 @@
   "profile": "server",
   "services": ["docker"],
   "superusers": {
-    "tylerdurden": {
+    "LOWPRIUSER": {
       "!password": "SOMESECRETPASSWORD"
     }
   },
