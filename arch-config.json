@@ -17,7 +17,7 @@
     "cd yay-bin",
     "makepkg -si",
     "yay -S snapper-rollback",
-    "yay -S storj-uplink rclone-bin",
+    "yay -S storj-uplink rclone-bin at",
     "cp ./.config /home/LOWPRIUSER/.config"
   ],
   "gfx_driver": "VMware / VirtualBox (open-source)",
@@ -63,8 +63,7 @@
     "ufw",
     "rsync",
     "snapper",
-    "snap-pac",
-    "restic"
+    "snap-pac"
   ],
   "profile": "server",
   "services": ["docker"],
